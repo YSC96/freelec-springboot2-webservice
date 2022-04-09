@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+
 @Getter // 롬복
 @NoArgsConstructor // 롬복 , 기본 생성자 자동추가
 @Entity // 테이블과 링크될 클래스
@@ -28,6 +29,11 @@ public class Posts { // 실제 DB의 테이블과 매칭될 클래스 = Entity �
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void update(String title, String content){
+        this.title = title;
+        this.content = content;
     }
 
 }
