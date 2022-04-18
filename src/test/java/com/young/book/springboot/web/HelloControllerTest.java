@@ -33,7 +33,7 @@ public class HelloControllerTest {
     @Test
     public void helloDto_return() throws Exception {
         String name = "hello";
-        int amount = 1000;
+        int amount = 1;
 
         mvc.perform(
                 get("/hello/dto")
