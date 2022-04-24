@@ -8,9 +8,10 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT) // 랜덤 포트 실행
+@SpringBootTest(webEnvironment = RANDOM_PORT) // 랜덤 포트 실행
 public class IndexControllerTest {
 
     @Autowired
@@ -22,7 +23,7 @@ public class IndexControllerTest {
         String body = this.restTemplate.getForObject("/",String.class); // 주어진 URL 주소로 HTTP GET 메서드로 객체로 결과를 반환받는다
 
         //then
-        assertThat(body).contains("스프링 부트로 시작하는 웹 서비스");
+        assertThat(body).contains("스프링부트 웹서비스");
     }
 
 }
